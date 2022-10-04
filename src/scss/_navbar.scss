@@ -1,0 +1,167 @@
+nav {
+    background-color: var(--navbar-clr);
+    transition: var(--transition);
+
+    button.login {
+        cursor: pointer;
+        padding: 0.8rem 2rem;
+        border-radius: 2rem;
+        background-color: var(--navbar-font);
+        color: var(--navbar-clr);
+        border: 0.1rem solid var(--navbar-font);
+        font-weight: bolder;
+        transition: var(--transition);
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    button.register {
+        cursor: pointer;
+        padding: 0.8rem 2rem;
+        border-radius: 2rem;
+        background-color: var(--navbar-clr);
+        color: var(--navbar-font);
+
+        border: 0.1rem solid var(--navbar-font);
+        font-weight: bolder;
+        transition: var(--transition);
+        &:hover {
+            background-color: var(--navbar-font);
+            color: var(--navbar-clr);
+            border-color: var(--navbar-clr);
+        }
+    }
+
+    .py-3 {
+        padding: 2rem 0;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .brand {
+            display: flex;
+            gap: 0.3rem;
+            position: relative;
+            span {
+                font-size: 2rem;
+                color: var(--navbar-font);
+                font-weight: bolder;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .dot {
+                color: var(--navbar-font);
+            }
+
+            .links {
+                width: 0vw;
+                position: fixed;
+                right: 0;
+                top: 0;
+                height: 100vh;
+                z-index: 0;
+                background-color: var(--navbar-clr);
+                visibility: hidden;
+                transition: var(--transition);
+                opacity: 0;
+                ul {
+                    height: 100%;
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 4rem;
+                    li {
+                        a {
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: var(--navbar-font);
+                            font-weight: bold;
+                            &:hover {
+                                opacity: 0.8;
+                            }
+                        }
+                        a.active {
+                            color: var(--active-link);
+                        }
+                    }
+                }
+            }
+        }
+        .links-container {
+            .toggle {
+                display: flex;
+                gap: 1rem;
+                flex-direction: row-reverse;
+                position: relative;
+                z-index: 1;
+                svg {
+                    color: var(--navbar-font);
+                    font-size: 1.5rem;
+                }
+            }
+
+            .responsive-toggle {
+                width: 60vw;
+                right: 0vw;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    @media only screen and (min-device-width: 1200px) {
+        position: fixed;
+        width: 100%;
+        button.register {
+            margin-left: 1rem;
+        }
+        background-color: var(--navbar-clr);
+        margin-top: 0;
+        .py-3 {
+            padding: 0.4rem 0;
+        }
+        .container {
+            .brand {
+                align-items: center;
+                .hr {
+                    margin: 0 2.75rem;
+                    height: 4rem;
+                    width: 0.1px;
+                    background-color: rgba(255, 255, 255, 0.047);
+                }
+
+                .links {
+                    position: initial;
+                    height: max-content;
+                    visibility: visible;
+                    opacity: 1;
+                    width: 100%;
+                    ul {
+                        height: 1rem;
+                        flex-direction: row;
+                        .live-category {
+                            position: relative;
+                            .live-label {
+                                top: -0.7rem;
+                                right: -0.7rem;
+                                position: absolute;
+                                width: 0.922rem;
+                                height: 0.7rem;
+                                background-color: black;
+                                border-radius: 1rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p {
+                                    font-size: 0.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
