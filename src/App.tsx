@@ -12,10 +12,7 @@ function App() {
     return (
         <BrowserRouter>
             <div className='app'>
-                <Navbar
-                    currentPage={currentPage}
-                    setCurrentPage={setCurrentPage}
-                />
+                <Navbar currentPage={currentPage} />
                 <Routes>
                     <Route
                         path='/bsplic/'
