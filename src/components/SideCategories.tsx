@@ -17,7 +17,7 @@ const SideCategories = () => {
         { icon: gamingPNG, title: 'Gaming' },
         { icon: drinkingPNG, title: 'Picie' },
         { icon: schoolPNG, title: 'Szkoła' },
-        { icon: awardPNG, title: 'BSPL Awards' },
+        // { icon: awardPNG, title: 'BSPL Awards' },
         { icon: streamingPNG, title: 'Streaming' },
         { icon: mmaPNG, title: 'Freakfights' },
     ]

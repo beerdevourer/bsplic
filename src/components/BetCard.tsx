@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface Bet {
     icon: string
@@ -28,6 +28,13 @@ interface BetProps {
     bet: Bet
 }
 
+interface ButtonsClicked {
+    home1Clicked: boolean
+    away1Clicked: boolean
+    home2Clicked: boolean
+    away2Clicked: boolean
+}
+
 const BetCard = ({ bet }: BetProps) => {
     const {
         icon,
@@ -52,6 +59,13 @@ const BetCard = ({ bet }: BetProps) => {
         home2Percents,
         away2Percents,
     } = bet
+
+    const [activeButtons, setActiveButtons] = useState<ButtonsClicked>({
+        home1Clicked: false,
+        away1Clicked: false,
+        home2Clicked: false,
+        away2Clicked: false,
+    })
 
     return (
         <div className='bet-card-container'>
@@ -83,7 +97,20 @@ const BetCard = ({ bet }: BetProps) => {
                 </div>
                 <div className='bets-buttons-container'>
                     <div className='left-bets-buttons-container'>
-                        <button>
+                        <button
+                            onClick={() => {
+                                setActiveButtons((prevValue) => {
+                                    return {
+                                        ...prevValue,
+                                        home1Clicked:
+                                            !activeButtons.home1Clicked,
+                                    }
+                                })
+                            }}
+                            className={`${
+                                activeButtons.home1Clicked ? 'active' : ''
+                            }`}
+                        >
                             <h5>{home1Name}</h5>
                             <h4>{home1Odds}</h4>
                         </button>
@@ -98,7 +125,20 @@ const BetCard = ({ bet }: BetProps) => {
                         </div>
                     </div>
                     <div className='right-bets-buttons-container'>
-                        <button>
+                        <button
+                            onClick={() => {
+                                setActiveButtons((prevValue) => {
+                                    return {
+                                        ...prevValue,
+                                        away1Clicked:
+                                            !activeButtons.away1Clicked,
+                                    }
+                                })
+                            }}
+                            className={`${
+                                activeButtons.away1Clicked ? 'active' : ''
+                            }`}
+                        >
                             <h5>{away1Name}</h5>
                             <h4>{away1Odds}</h4>
                         </button>
@@ -123,7 +163,20 @@ const BetCard = ({ bet }: BetProps) => {
                 </div>
                 <div className='bets-buttons-container'>
                     <div className='left-bets-buttons-container'>
-                        <button>
+                        <button
+                            onClick={() => {
+                                setActiveButtons((prevValue) => {
+                                    return {
+                                        ...prevValue,
+                                        home2Clicked:
+                                            !activeButtons.home2Clicked,
+                                    }
+                                })
+                            }}
+                            className={`${
+                                activeButtons.home2Clicked ? 'active' : ''
+                            }`}
+                        >
                             <h5>{home2Name}</h5>
                             <h4>{home2Odds}</h4>
                         </button>
@@ -138,7 +191,20 @@ const BetCard = ({ bet }: BetProps) => {
                         </div>
                     </div>
                     <div className='right-bets-buttons-container'>
-                        <button>
+                        <button
+                            onClick={() => {
+                                setActiveButtons((prevValue) => {
+                                    return {
+                                        ...prevValue,
+                                        away2Clicked:
+                                            !activeButtons.away2Clicked,
+                                    }
+                                })
+                            }}
+                            className={`${
+                                activeButtons.away2Clicked ? 'active' : ''
+                            }`}
+                        >
                             <h5>{away2Name}</h5>
                             <h4>{away2Odds}</h4>
                         </button>

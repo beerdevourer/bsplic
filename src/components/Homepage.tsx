@@ -1,11 +1,20 @@
-import { Sidebar, HomepageMain } from './'
+import { Sidebar, HomepageMain, RightBar } from './'
+import { useEffect } from 'react'
 
-const Homepage = () => {
+interface HomepageProps {
+    setCurrentPage: Function
+}
+
+const Homepage = ({ setCurrentPage }: HomepageProps) => {
+    useEffect(() => {
+        setCurrentPage('home')
+    }, [])
+
     return (
         <div className='homepage'>
             <Sidebar />
             <HomepageMain />
-            <Sidebar />
+            <RightBar />
         </div>
     )
 }

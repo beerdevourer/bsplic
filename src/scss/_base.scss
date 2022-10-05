@@ -1,13 +1,16 @@
 :root {
-    --navbar-clr: #790753;
+    --navbar-clr: rgb(202, 26, 26);
     --navbar-font: white;
     --transition: 0.3s ease-out;
+    --transition-fast: 0.15s ease-out;
     --fixed-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     --elevate-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     --svg-color: black;
     --background: white;
     --light-blue: #4895ef;
     --active-link: rgb(255, 255, 96);
+    --all-bets-clr: rgb(229, 37, 37);
+    --all-bets-clr-hover: rgb(203, 35, 35);
 }
 
 * {

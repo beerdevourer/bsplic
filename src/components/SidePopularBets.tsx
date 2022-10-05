@@ -23,12 +23,12 @@ const SidePopularBets = () => {
         { icon: soccerPNG, title: 'FIFA 23' },
         { icon: grid2PNG, title: 'Grid 2' },
         { icon: gta5PNG, title: 'GTA V' },
-        { icon: panstwamiastaPNG, title: 'Państwa-miasta' },
-        { icon: bsplPNG, title: 'BSPL' },
+        // { icon: panstwamiastaPNG, title: 'Państwa-miasta' },
+        // { icon: bsplPNG, title: 'BSPL' },
         { icon: dicePNG, title: 'Bukmacherka' },
-        { icon: crazyPNG, title: 'Dawid Jasper' },
-        { icon: atomPNG, title: 'Fizyka' },
-        { icon: examPNG, title: 'Matura' },
+        // { icon: crazyPNG, title: 'Dawid Jasper' },
+        // { icon: atomPNG, title: 'Fizyka' },
+        // { icon: examPNG, title: 'Matura' },
     ]
 
     return (

@@ -5,7 +5,13 @@ import { MdClose } from 'react-icons/md'
 import { ImSun } from 'react-icons/im'
 import { BsFillMoonFill } from 'react-icons/bs'
 
-const Navbar = () => {
+type CurrentPage = 'home' | 'live' | 'promo'
+
+interface NavProps {
+    currentPage: CurrentPage
+}
+
+const Navbar = ({ currentPage }: NavProps) => {
     const [navState, setNavState] = useState<boolean>(false)
     const html = document.querySelector('html')
     html?.addEventListener('click', () => {
@@ -20,12 +26,22 @@ const Navbar = () => {
                     <div className='links'>
                         <ul>
                             <li>
-                                <a href='/bsplic' className='active'>
+                                <a
+                                    href='/bsplic/'
+                                    className={`${
+                                        currentPage === 'home' ? 'active' : ''
+                                    }`}
+                                >
                                     ZAKŁADY
                                 </a>
                             </li>
                             <li>
-                                <a href='/bsplic' className='live-category'>
+                                <a
+                                    href='/bsplic/live/'
+                                    className={`live-category ${
+                                        currentPage === 'live' ? 'active' : ''
+                                    }`}
+                                >
                                     NA ŻYWO{' '}
                                     <div className='live-label'>
                                         <p>0</p>
@@ -33,7 +49,14 @@ const Navbar = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href='/bsplic'>PROMOCJE</a>
+                                <a
+                                    href='/bsplic/promotion/'
+                                    className={`${
+                                        currentPage === 'promo' ? 'active' : ''
+                                    }`}
+                                >
+                                    PROMOCJE
+                                </a>
                             </li>
                         </ul>
                     </div>
