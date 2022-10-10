@@ -35,6 +35,7 @@ html,
 body,
 .app {
     overflow: visible;
+    overflow-x: hidden;
 }
 
 ul {
@@ -74,5 +75,5 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #48cae4;
+    background-color: rgb(233, 67, 67);
 }

@@ -15,7 +15,7 @@ const SearchBar = () => {
             <i className='fa-solid fa-magnifying-glass'></i>
             <input
                 type='text'
-                placeholder='Wyszukaj mecz lub zawody'
+                placeholder='Szukaj'
                 onChange={handleChange}
                 value={inputContent}
             />

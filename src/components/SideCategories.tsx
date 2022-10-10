@@ -1,11 +1,11 @@
 import React from 'react'
 import circlePlaceholder from '../assets/circle.webp'
-import schoolPNG from '../assets/school.png'
-import drinkingPNG from '../assets/drinking.png'
-import gamingPNG from '../assets/gaming.png'
-import awardPNG from '../assets/award.png'
-import streamingPNG from '../assets/live.png'
-import mmaPNG from '../assets/mma.png'
+import schoolPNG from '../assets/categories/school.png'
+import drinkingPNG from '../assets/categories/drinking.png'
+import gamingPNG from '../assets/categories/gaming.png'
+import awardPNG from '../assets/categories/award.png'
+import streamingPNG from '../assets/categories/live.png'
+import mmaPNG from '../assets/categories/mma.png'
 
 interface Category {
     icon: string

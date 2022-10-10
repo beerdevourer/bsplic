@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Navbar, Homepage, Livepage } from './components'
+import { Navbar, Homepage, Livepage, Footbar } from './components'
 import { useState } from 'react'
 import './scss/index.scss'
 import Promotionpage from './components/Promotionpage'
@@ -29,6 +29,7 @@ function App() {
                         }
                     />
                 </Routes>
+                <Footbar />
             </div>
         </BrowserRouter>
     )

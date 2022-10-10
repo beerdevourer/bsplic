@@ -21,7 +21,9 @@ const Navbar = ({ currentPage }: NavProps) => {
         <nav>
             <div className='container py-3 mx-3'>
                 <div className='brand'>
-                    <span>BSPLIC.</span>
+                    <a href='/bsplic/'>
+                        <span>BSPLIC.</span>
+                    </a>
                     <div className='hr'></div>
                     <div className='links'>
                         <ul>

@@ -38,4 +38,14 @@
         color: rgb(114, 108, 108);
         font-size: 0.91rem;
     }
+    @media only screen and (max-device-width: 1700px) {
+        input {
+            width: 12rem;
+        }
+    }
+    @media only screen and (max-device-width: 800px) {
+        input {
+            width: 12rem;
+        }
+    }
 }
